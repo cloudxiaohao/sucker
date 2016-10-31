@@ -1,6 +1,7 @@
 from __future__ import unicode_literals
 
 from django.db import models
+from tinymce.models import HTMLField
 
 # Create your models here.
 
@@ -52,7 +53,8 @@ class GoodInfo(models.Model):
     dictID = models.ForeignKey('Dict')
     gunit = models.CharField(max_length=20)
     gprice = models.CharField(max_length=20)
-    gdetails = models.CharField(max_length=1000)
+    gdetail = HTMLField()
+    gpic = models.ImageField()
 
 
 class Comment(models.Model):
