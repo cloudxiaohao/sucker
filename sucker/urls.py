@@ -17,8 +17,11 @@ from django.conf.urls import url,include
 from django.contrib import admin
 
 urlpatterns = [
-    url(r'^admin/', admin.site.urls),
-    url(r'^main/',include('main.urls', namespace='sucker')),    
+    url(r'^admin/', admin.site.urls), 
     url(r'^tinymce/', include('tinymce.urls')),
     url(r'^goods/',include('goods.urls')),
+    url(r'^login/',include('login.urls')),
+    url(r'^shengyuan/',include('shengyuan.urls')),
+    url(r'^ucenter/',include('ucenter.urls')),
+
 ]

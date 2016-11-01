@@ -4,7 +4,7 @@
 
 from django.db import models
 from tinymce.models import HTMLField
-from main.models import *
+from ucenter.models import *
 
 #商品信息
 class GoodInfo(models.Model):

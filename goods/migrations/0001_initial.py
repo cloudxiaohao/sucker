@@ -8,7 +8,7 @@ import tinymce.models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('main', '0001_initial'),
+        ('ucenter', '0001_initial'),
     ]
 
     operations = [
@@ -37,7 +37,7 @@ class Migration(migrations.Migration):
                 ('gname', models.CharField(max_length=20)),
                 ('gdescrption', models.CharField(max_length=200)),
                 ('gunit', models.CharField(max_length=20)),
-                ('gprice', models.CharField(max_length=20)),
+                ('gprice', models.DecimalField(max_digits=4, decimal_places=2)),
                 ('gdetail', tinymce.models.HTMLField()),
                 ('gpic', models.ImageField(upload_to=b'uploads')),
                 ('dictID', models.ForeignKey(to='goods.Dict')),
@@ -59,6 +59,6 @@ class Migration(migrations.Migration):
         migrations.AddField(
             model_name='comment',
             name='userID',
-            field=models.ForeignKey(to='main.UserInfo'),
+            field=models.ForeignKey(to='ucenter.UserInfo'),
         ),
     ]

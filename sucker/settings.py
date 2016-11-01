@@ -37,9 +37,11 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'main',
     'tinymce',
     'goods',
+    'login',
+    'shengyuan',
+    'ucenter',
 ]
 
 MIDDLEWARE_CLASSES = [
