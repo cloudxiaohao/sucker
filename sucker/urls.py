@@ -18,7 +18,7 @@ from django.contrib import admin
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^',include('main.urls', namespace='sucker')),
-    url(r'^',include('shengyuan.urls',namespace='shengyuan')),
+    url(r'^main/',include('main.urls', namespace='sucker')),    
     url(r'^tinymce/', include('tinymce.urls')),
+    url(r'^goods/',include('goods.urls')),
 ]

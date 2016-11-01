@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'main',
     'tinymce',
+    'goods',
 ]
 
 MIDDLEWARE_CLASSES = [
@@ -79,8 +80,8 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'sucker',
-        'HOST': '',
-        'PORT': '',
+        'HOST': '192.168.241.128',
+        'PORT': '3306',
         'USER': 'root',
         'PASSWORD': 'mysql',
     }
@@ -133,3 +134,5 @@ TINYMCE_DEFAULT_CONFIG = {
     'width': 600,
     'height': 400,
 }
+
+MEDIA_ROOT=os.path.join(BASE_DIR,"static")
